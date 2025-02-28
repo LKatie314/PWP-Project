@@ -210,6 +210,10 @@ def pipeline(image):
 
 def process_video(input_path):
     cap = cv2.VideoCapture(input_path)
+
+    # Skip first 5 seconds
+    cap.set(cv2.CAP_PROP_POS_MSEC, 12000)  
+
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -225,6 +229,7 @@ def process_video(input_path):
             break
     cap.release()
     cv2.destroyAllWindows()
+
 
 
 # Usage
