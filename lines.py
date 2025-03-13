@@ -27,7 +27,6 @@
       - Calculate slope between lane points
       - Convert slope to steering angle
       - Special handling for sharp turns (>30 degrees)
-      - Time-based override for specific maneuver (58-62 seconds)
 
    e. Visualization:
       - Draw detected lane boundaries
